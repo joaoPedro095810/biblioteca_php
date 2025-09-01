@@ -14,19 +14,19 @@
     <div class="container">
         <form action="inserir.php" method="POST">
             <div class="mb-3">                
-                <input placeholder="Digite o título do Livro" type="text" name="titulo" class="form-control">                
+                <input placeholder="Digite o título do Livro..." type="text" name="titulo" class="form-control">                
             </div>
             <div class="mb-3">                
-                <input placeholder="Digite o genero do Livro" name="genero" type="text" class="form-control">                
+                <input placeholder="Digite o genero do Livro... name="genero" type="text" class="form-control">                
             </div>
             <div class="mb-3">                
-                <input placeholder="Digite o autor do Livro" name="autor" type="text" class="form-control">                
+                <input placeholder="Digite o autor do Livro..." name="autor" type="text" class="form-control">                
             </div>
             <div class="mb-3">                
-                <input placeholder="Digite o ano do Livro" name="ano" type="text" class="form-control">                
+                <input placeholder="Digite o ano do Livro..." name="ano" type="text" class="form-control">                
             </div>
             <div class="mb-3">                
-                <input placeholder="Digite quantidade de páginas do Livro" type="text" name="paginas" class="form-control">                
+                <input placeholder="Digite quantidade de páginas do Livro..." type="text" name="paginas" class="form-control">                
             </div>
             
             

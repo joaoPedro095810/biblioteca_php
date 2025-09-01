@@ -9,60 +9,39 @@
 <body>
     <?php
         include_once 'pedaco.php';
-
         $id = $_GET['id'];
-        // echo "Valor do ID: " . $id;
-
-        include_once 'conexao.php';
     ?>
+    
     <h2>Formulário para Atualização de Livro</h2>
     <div class="container">
-        <form action="#" method="POST">
+        <form action="atualizar.php?id=<?php echo $id; ?>" method="POST">
 
         <?php            
+            require 'conexao.php';
             $sql = "SELECT * FROM livros WHERE id = $id";
             $stmt = $pdo->query($sql);
-            $livros = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            // while ($livros = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            //     // echo "<div class='mb-3'>                
-            //     //         <input type='text' value='".$livros['titulo']."' name='titulo' class='form-control'>                
-            //     //       </div>
-            //     // ";
-                
-            //     // echo "Titulo: " . $livros['titulo'] . "<br>";
-            //     // echo "Genero:" . $livros['genero'] . "<br>";
-            //     // echo "Autor: " . $livros['autor'] . "<br>";
-            //     // echo "Ano: " . $livros['ano'] . "<br>";
-            //     // echo "Páginas: " . $livros['paginas'] . "<br><br>";
-            // }
-
-
-            var_dump($livros);
+            $livros = $stmt->fetch(PDO::FETCH_ASSOC); 
+            
         ?>
-
-
-
-
-
             <div class="mb-3">                
-                <input type="text" name="titulo" value="<?php echo $livros['titulo']; ?>" class="form-control">                
+                Titulo:<input type="text" class="form-control"  value= "<?php echo $livro['titulo']; ?>" name = "novo_titulo">
             </div>
             <div class="mb-3">                
-                <input name="genero" type="text" class="form-control">                
+                Genero:<input type="text" class="form-control"  value= "<?php echo $livro['genero']; ?>" name = "novo_titulo">   
             </div>
             <div class="mb-3">                
-                <input name="autor" type="text" class="form-control">                
+                AUTOR:<input type="text" class="form-control"  value= "<?php echo $livro['autor']; ?>" name = "novo_titulo">       
             </div>
             <div class="mb-3">                
-                <input name="ano" type="text" class="form-control">                
+                ANO:<input type="text" class="form-control"  value= "<?php echo $livro['ano']; ?>" name = "novo_titulo">              
             </div>
             <div class="mb-3">                
-                <input type="text" name="paginas" class="form-control">                
-            </div>
-            
-            
+                PAGINAS<input type="text" class="form-control"  value= "<?php echo $livro['paginas']; ?>" name = "novo_titulo">          
+            </div>  
+            <div>
+                
             <button type="submit" class="btn btn-primary">ATUALIZAR LIVRO</button>
+        </div>
         </form>
         <a class="btn btn-danger mb-3" href="index.php" type="button" class="btn btn-primary">Voltar</a>
     </div>
